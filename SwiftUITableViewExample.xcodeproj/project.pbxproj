@@ -7,18 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		521CD5E92A559786003096F4 /* ScrollViewOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521CD5E82A559786003096F4 /* ScrollViewOffset.swift */; };
 		522D40C12A4B45FF0019909C /* SwiftUITableViewExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D40C02A4B45FF0019909C /* SwiftUITableViewExampleApp.swift */; };
 		522D40C52A4B46000019909C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 522D40C42A4B46000019909C /* Assets.xcassets */; };
 		522D40C82A4B46000019909C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 522D40C72A4B46000019909C /* Preview Assets.xcassets */; };
+		5258EE3E2A69962F00BA1B39 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258EE3D2A69962F00BA1B39 /* Store.swift */; };
+		5258EE402A69965700BA1B39 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258EE3F2A69965700BA1B39 /* Observer.swift */; };
+		5258EE422A69A3BD00BA1B39 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258EE412A69A3BD00BA1B39 /* AppState.swift */; };
+		5258EE442A69A3EA00BA1B39 /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258EE432A69A3EA00BA1B39 /* AppAction.swift */; };
+		5258EE462A69A40700BA1B39 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258EE452A69A40700BA1B39 /* AppReducer.swift */; };
+		5258EE492A69A51800BA1B39 /* ConversationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258EE482A69A51800BA1B39 /* ConversationState.swift */; };
+		5258EE4B2A69A57D00BA1B39 /* ConversationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258EE4A2A69A57D00BA1B39 /* ConversationAction.swift */; };
+		5258EE4D2A69A5AF00BA1B39 /* ConversationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258EE4C2A69A5AF00BA1B39 /* ConversationReducer.swift */; };
+		5258EE502A69A69100BA1B39 /* Connector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258EE4F2A69A69100BA1B39 /* Connector.swift */; };
+		5258EE532A69A6E200BA1B39 /* ConversationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258EE522A69A6E200BA1B39 /* ConversationScreen.swift */; };
+		5258EE562A69AC1F00BA1B39 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258EE552A69AC1F00BA1B39 /* KeyboardResponder.swift */; };
+		5258EE592A69AC6D00BA1B39 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258EE582A69AC6D00BA1B39 /* UIApplication+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		521CD5E82A559786003096F4 /* ScrollViewOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewOffset.swift; sourceTree = "<group>"; };
 		522D40BD2A4B45FF0019909C /* SwiftUITableViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUITableViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		522D40C02A4B45FF0019909C /* SwiftUITableViewExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITableViewExampleApp.swift; sourceTree = "<group>"; };
 		522D40C42A4B46000019909C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		522D40C72A4B46000019909C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5258EE3D2A69962F00BA1B39 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		5258EE3F2A69965700BA1B39 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		5258EE412A69A3BD00BA1B39 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		5258EE432A69A3EA00BA1B39 /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
+		5258EE452A69A40700BA1B39 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		5258EE482A69A51800BA1B39 /* ConversationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationState.swift; sourceTree = "<group>"; };
+		5258EE4A2A69A57D00BA1B39 /* ConversationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationAction.swift; sourceTree = "<group>"; };
+		5258EE4C2A69A5AF00BA1B39 /* ConversationReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationReducer.swift; sourceTree = "<group>"; };
+		5258EE4F2A69A69100BA1B39 /* Connector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connector.swift; sourceTree = "<group>"; };
+		5258EE522A69A6E200BA1B39 /* ConversationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationScreen.swift; sourceTree = "<group>"; };
+		5258EE542A69A7DF00BA1B39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5258EE552A69AC1F00BA1B39 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
+		5258EE582A69AC6D00BA1B39 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +74,13 @@
 		522D40BF2A4B45FF0019909C /* SwiftUITableViewExample */ = {
 			isa = PBXGroup;
 			children = (
+				5258EE512A69A6CD00BA1B39 /* Views */,
+				5258EE572A69AC5C00BA1B39 /* Extensions */,
+				5258EE4E2A69A68500BA1B39 /* Utility */,
 				522D40C02A4B45FF0019909C /* SwiftUITableViewExampleApp.swift */,
-				521CD5E82A559786003096F4 /* ScrollViewOffset.swift */,
 				522D40C42A4B46000019909C /* Assets.xcassets */,
+				5258EE542A69A7DF00BA1B39 /* Info.plist */,
+				5258EE3C2A69961A00BA1B39 /* Redux */,
 				522D40C62A4B46000019909C /* Preview Content */,
 			);
 			path = SwiftUITableViewExample;
@@ -65,6 +92,54 @@
 				522D40C72A4B46000019909C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5258EE3C2A69961A00BA1B39 /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				5258EE472A69A50B00BA1B39 /* Conversation */,
+				5258EE3D2A69962F00BA1B39 /* Store.swift */,
+				5258EE412A69A3BD00BA1B39 /* AppState.swift */,
+				5258EE432A69A3EA00BA1B39 /* AppAction.swift */,
+				5258EE452A69A40700BA1B39 /* AppReducer.swift */,
+				5258EE3F2A69965700BA1B39 /* Observer.swift */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		5258EE472A69A50B00BA1B39 /* Conversation */ = {
+			isa = PBXGroup;
+			children = (
+				5258EE482A69A51800BA1B39 /* ConversationState.swift */,
+				5258EE4A2A69A57D00BA1B39 /* ConversationAction.swift */,
+				5258EE4C2A69A5AF00BA1B39 /* ConversationReducer.swift */,
+			);
+			path = Conversation;
+			sourceTree = "<group>";
+		};
+		5258EE4E2A69A68500BA1B39 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				5258EE4F2A69A69100BA1B39 /* Connector.swift */,
+				5258EE552A69AC1F00BA1B39 /* KeyboardResponder.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		5258EE512A69A6CD00BA1B39 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5258EE522A69A6E200BA1B39 /* ConversationScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5258EE572A69AC5C00BA1B39 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5258EE582A69AC6D00BA1B39 /* UIApplication+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +158,8 @@
 			dependencies = (
 			);
 			name = SwiftUITableViewExample;
+			packageProductDependencies = (
+			);
 			productName = SwiftUITableViewExample;
 			productReference = 522D40BD2A4B45FF0019909C /* SwiftUITableViewExample.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +188,8 @@
 				Base,
 			);
 			mainGroup = 522D40B42A4B45FF0019909C;
+			packageReferences = (
+			);
 			productRefGroup = 522D40BE2A4B45FF0019909C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +216,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				521CD5E92A559786003096F4 /* ScrollViewOffset.swift in Sources */,
+				5258EE442A69A3EA00BA1B39 /* AppAction.swift in Sources */,
+				5258EE502A69A69100BA1B39 /* Connector.swift in Sources */,
+				5258EE402A69965700BA1B39 /* Observer.swift in Sources */,
+				5258EE4D2A69A5AF00BA1B39 /* ConversationReducer.swift in Sources */,
+				5258EE422A69A3BD00BA1B39 /* AppState.swift in Sources */,
 				522D40C12A4B45FF0019909C /* SwiftUITableViewExampleApp.swift in Sources */,
+				5258EE4B2A69A57D00BA1B39 /* ConversationAction.swift in Sources */,
+				5258EE462A69A40700BA1B39 /* AppReducer.swift in Sources */,
+				5258EE592A69AC6D00BA1B39 /* UIApplication+Extensions.swift in Sources */,
+				5258EE492A69A51800BA1B39 /* ConversationState.swift in Sources */,
+				5258EE562A69AC1F00BA1B39 /* KeyboardResponder.swift in Sources */,
+				5258EE532A69A6E200BA1B39 /* ConversationScreen.swift in Sources */,
+				5258EE3E2A69962F00BA1B39 /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +360,7 @@
 				DEVELOPMENT_TEAM = 3PTYV272Z4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = SwiftUITableViewExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -299,7 +389,7 @@
 				DEVELOPMENT_TEAM = 3PTYV272Z4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = SwiftUITableViewExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
