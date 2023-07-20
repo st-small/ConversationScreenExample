@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		521CD5E92A559786003096F4 /* ScrollViewOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521CD5E82A559786003096F4 /* ScrollViewOffset.swift */; };
 		522D40C12A4B45FF0019909C /* SwiftUITableViewExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D40C02A4B45FF0019909C /* SwiftUITableViewExampleApp.swift */; };
-		522D40C32A4B45FF0019909C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D40C22A4B45FF0019909C /* ContentView.swift */; };
 		522D40C52A4B46000019909C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 522D40C42A4B46000019909C /* Assets.xcassets */; };
 		522D40C82A4B46000019909C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 522D40C72A4B46000019909C /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		521CD5E82A559786003096F4 /* ScrollViewOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewOffset.swift; sourceTree = "<group>"; };
 		522D40BD2A4B45FF0019909C /* SwiftUITableViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUITableViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		522D40C02A4B45FF0019909C /* SwiftUITableViewExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITableViewExampleApp.swift; sourceTree = "<group>"; };
-		522D40C22A4B45FF0019909C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		522D40C42A4B46000019909C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		522D40C72A4B46000019909C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				522D40C02A4B45FF0019909C /* SwiftUITableViewExampleApp.swift */,
-				522D40C22A4B45FF0019909C /* ContentView.swift */,
+				521CD5E82A559786003096F4 /* ScrollViewOffset.swift */,
 				522D40C42A4B46000019909C /* Assets.xcassets */,
 				522D40C62A4B46000019909C /* Preview Content */,
 			);
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				522D40C32A4B45FF0019909C /* ContentView.swift in Sources */,
+				521CD5E92A559786003096F4 /* ScrollViewOffset.swift in Sources */,
 				522D40C12A4B45FF0019909C /* SwiftUITableViewExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
