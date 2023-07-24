@@ -12,7 +12,10 @@ struct ConversationScreenConnector: Connector {
                     store.dispatch(.conversation(.addMessage(value)))
                 }
             },
-            onDeleteMessage: { store.dispatch(.conversation(.deleteMessage($0))) }
+            onDeleteMessage: { value in
+                withAnimation {
+                store.dispatch(.conversation(.deleteMessage(value))) }
+            }
         )
     }
 }
@@ -53,7 +56,10 @@ struct ConversationScreen: View {
                                 .contentShape(.contextMenuPreview, RoundedRectangle(cornerRadius: 15, style: .continuous))
                                 .contextMenu {
                                     Button("Replace") {
-                                        onDeleteMessage(message.id)
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300)) {
+                                            onDeleteMessage(message.id)
+                                        }
+
                                     }
                                 }
                                 .cornerRadius(15)
@@ -102,7 +108,7 @@ struct ConversationScreen: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Add number") {
-                        onAddMessage(Int.random(in: 500...700))
+                        onAddMessage(Int.random(in: 500...7000000))
                     }
                 }
             }
