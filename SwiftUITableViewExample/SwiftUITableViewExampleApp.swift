@@ -8,9 +8,7 @@ let store = AppStore(
 struct SwiftUITableViewExampleApp: App {
     
     init() {
-        store.dispatch(.conversation(.addMessage(5)))
-        store.dispatch(.conversation(.addMessage(7)))
-        store.dispatch(.conversation(.addMessage(9)))
+        prepareInitialData()
         
         let coloredAppearance = UINavigationBarAppearance()
         coloredAppearance.configureWithOpaqueBackground()
@@ -27,5 +25,9 @@ struct SwiftUITableViewExampleApp: App {
             ConversationScreenConnector()
                 .environmentObject(store)
         }
+    }
+    
+    private func prepareInitialData() {
+        messagesData.forEach { store.dispatch(.conversation(.addMessage($0))) }
     }
 }

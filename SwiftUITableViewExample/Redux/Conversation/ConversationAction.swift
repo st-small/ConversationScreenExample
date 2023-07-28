@@ -1,6 +1,7 @@
 import Foundation
 
 public enum ConversationAction {
-    case addMessage(Int)
+    case addMessageWithValue(Int)
+    case addMessage(Message)
     case deleteMessage(UUID)
 }

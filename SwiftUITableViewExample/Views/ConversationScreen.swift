@@ -9,7 +9,7 @@ struct ConversationScreenConnector: Connector {
             messages: messages,
             onAddMessage: { value in
                 withAnimation {
-                    store.dispatch(.conversation(.addMessage(value)))
+                    store.dispatch(.conversation(.addMessageWithValue(value)))
                 }
             },
             onDeleteMessage: { value in
@@ -48,25 +48,8 @@ struct ConversationScreen: View {
                                 // Message Cell
                                 HStack {
                                     Spacer()
-                                    Text("Item \(message.content)")
-                                    Spacer()
+                                    messageCell(message)
                                 }
-                                .frame(height: 70)
-                                .background(color(fraction: Double(message.value) / 100))
-                                .contentShape(.contextMenuPreview, RoundedRectangle(cornerRadius: 15, style: .continuous))
-                                .contextMenu {
-                                    Button("Replace") {
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300)) {
-                                            onDeleteMessage(message.id)
-                                        }
-
-                                    }
-                                }
-                                .cornerRadius(15)
-                                .shadow(radius: 5)
-                                .padding(15)
-                                .id(message.id)
-                                .transition(.move(edge: .trailing))
                             }
                         }
                         .onChange(of: messages.count) { newValue in
@@ -125,13 +108,59 @@ struct ConversationScreen: View {
         Color(red: fraction, green: 1 - fraction, blue: 0.5)
             .opacity(0.3)
     }
+    
+    private func messageCell(_ message: Message) -> some View {
+        Group {
+            if let imageName = message.image {
+                // Image message view
+                Image(imageName)
+                    .resizable()
+                    .scaledToFill()
+                    .cornerRadius(15)
+                    .padding(5)
+            } else {
+                // Text message view
+                HStack {
+                    Spacer()
+                    Text("Item \(message.content)")
+                    Spacer()
+                }
+                .frame(height: 70)
+            }
+        }
+        .frame(width: message.width)
+        .background(color(fraction: Double(message.value) / 100))
+        .contentShape(.contextMenuPreview, RoundedRectangle(cornerRadius: 15, style: .continuous))
+        .contextMenu {
+            Button("Replace") {
+                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300)) {
+                    onDeleteMessage(message.id)
+                }
+
+            }
+        }
+        .cornerRadius(15)
+        .shadow(radius: 5)
+        .padding(15)
+        .id(message.id)
+        .transition(.move(edge: .trailing))
+    }
 }
 
 struct ConversationScreen_Previews: PreviewProvider {
     static var previews: some View {
         ConversationScreen(
             messages: [
-                Message(id: UUID(), value: 5)
+                Message(
+                    id: UUID(),
+                    value: 5,
+                    image: nil,
+                    width: 270),
+                Message(
+                    id: UUID(),
+                    value: 0,
+                    image: "one",
+                    width: 300)
             ],
             onAddMessage: { _ in },
             onDeleteMessage: { _ in }
