@@ -23,6 +23,17 @@
 		5258EE532A69A6E200BA1B39 /* ConversationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258EE522A69A6E200BA1B39 /* ConversationScreen.swift */; };
 		5258EE562A69AC1F00BA1B39 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258EE552A69AC1F00BA1B39 /* KeyboardResponder.swift */; };
 		5258EE592A69AC6D00BA1B39 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258EE582A69AC6D00BA1B39 /* UIApplication+Extensions.swift */; };
+		52CB5EA62A77FEE4008487D4 /* SecondConversationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB5EA52A77FEE4008487D4 /* SecondConversationScreen.swift */; };
+		52CB5EA82A780219008487D4 /* MessageCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB5EA72A780219008487D4 /* MessageCellView.swift */; };
+		52CB5EAA2A78027D008487D4 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB5EA92A78027D008487D4 /* Color+Extensions.swift */; };
+		52D109B62A82A707007531E3 /* ConversationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D109B52A82A707007531E3 /* ConversationTableViewController.swift */; };
+		52D109B82A82A7BF007531E3 /* ConversationMessageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D109B72A82A7BF007531E3 /* ConversationMessageContainer.swift */; };
+		52D109BA2A82AB32007531E3 /* ConversationHostingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D109B92A82AB32007531E3 /* ConversationHostingCell.swift */; };
+		52D109BC2A82B72B007531E3 /* MessageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D109BB2A82B72B007531E3 /* MessageTextView.swift */; };
+		52D109BE2A82B7A8007531E3 /* MessageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D109BD2A82B7A8007531E3 /* MessageContentView.swift */; };
+		52D109C02A83A413007531E3 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D109BF2A83A413007531E3 /* View+Extensions.swift */; };
+		52D109C22A83B4BC007531E3 /* UIKitConversationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D109C12A83B4BC007531E3 /* UIKitConversationScreen.swift */; };
+		52D109C42A83B73D007531E3 /* KeyboardInfo+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D109C32A83B73D007531E3 /* KeyboardInfo+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +55,17 @@
 		5258EE542A69A7DF00BA1B39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5258EE552A69AC1F00BA1B39 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
 		5258EE582A69AC6D00BA1B39 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
+		52CB5EA52A77FEE4008487D4 /* SecondConversationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondConversationScreen.swift; sourceTree = "<group>"; };
+		52CB5EA72A780219008487D4 /* MessageCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCellView.swift; sourceTree = "<group>"; };
+		52CB5EA92A78027D008487D4 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		52D109B52A82A707007531E3 /* ConversationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTableViewController.swift; sourceTree = "<group>"; };
+		52D109B72A82A7BF007531E3 /* ConversationMessageContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationMessageContainer.swift; sourceTree = "<group>"; };
+		52D109B92A82AB32007531E3 /* ConversationHostingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationHostingCell.swift; sourceTree = "<group>"; };
+		52D109BB2A82B72B007531E3 /* MessageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTextView.swift; sourceTree = "<group>"; };
+		52D109BD2A82B7A8007531E3 /* MessageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageContentView.swift; sourceTree = "<group>"; };
+		52D109BF2A83A413007531E3 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		52D109C12A83B4BC007531E3 /* UIKitConversationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitConversationScreen.swift; sourceTree = "<group>"; };
+		52D109C32A83B73D007531E3 /* KeyboardInfo+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardInfo+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				5258EE522A69A6E200BA1B39 /* ConversationScreen.swift */,
+				52CB5EA52A77FEE4008487D4 /* SecondConversationScreen.swift */,
+				52CB5EA72A780219008487D4 /* MessageCellView.swift */,
+				52D109B42A82A6E2007531E3 /* UIKit */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -141,8 +166,24 @@
 			isa = PBXGroup;
 			children = (
 				5258EE582A69AC6D00BA1B39 /* UIApplication+Extensions.swift */,
+				52CB5EA92A78027D008487D4 /* Color+Extensions.swift */,
+				52D109BF2A83A413007531E3 /* View+Extensions.swift */,
+				52D109C32A83B73D007531E3 /* KeyboardInfo+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		52D109B42A82A6E2007531E3 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				52D109C12A83B4BC007531E3 /* UIKitConversationScreen.swift */,
+				52D109B52A82A707007531E3 /* ConversationTableViewController.swift */,
+				52D109B92A82AB32007531E3 /* ConversationHostingCell.swift */,
+				52D109B72A82A7BF007531E3 /* ConversationMessageContainer.swift */,
+				52D109BB2A82B72B007531E3 /* MessageTextView.swift */,
+				52D109BD2A82B7A8007531E3 /* MessageContentView.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,20 +260,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52CB5EA82A780219008487D4 /* MessageCellView.swift in Sources */,
 				5258EE442A69A3EA00BA1B39 /* AppAction.swift in Sources */,
+				52D109BE2A82B7A8007531E3 /* MessageContentView.swift in Sources */,
 				5258EE502A69A69100BA1B39 /* Connector.swift in Sources */,
 				5258EE402A69965700BA1B39 /* Observer.swift in Sources */,
 				5258EE4D2A69A5AF00BA1B39 /* ConversationReducer.swift in Sources */,
 				5250B4CD2A73B33A00696314 /* PreparedData.swift in Sources */,
 				5258EE422A69A3BD00BA1B39 /* AppState.swift in Sources */,
+				52D109C02A83A413007531E3 /* View+Extensions.swift in Sources */,
 				522D40C12A4B45FF0019909C /* SwiftUITableViewExampleApp.swift in Sources */,
+				52D109B62A82A707007531E3 /* ConversationTableViewController.swift in Sources */,
 				5258EE4B2A69A57D00BA1B39 /* ConversationAction.swift in Sources */,
+				52D109BC2A82B72B007531E3 /* MessageTextView.swift in Sources */,
 				5258EE462A69A40700BA1B39 /* AppReducer.swift in Sources */,
+				52CB5EA62A77FEE4008487D4 /* SecondConversationScreen.swift in Sources */,
 				5258EE592A69AC6D00BA1B39 /* UIApplication+Extensions.swift in Sources */,
 				5258EE492A69A51800BA1B39 /* ConversationState.swift in Sources */,
+				52D109C22A83B4BC007531E3 /* UIKitConversationScreen.swift in Sources */,
+				52CB5EAA2A78027D008487D4 /* Color+Extensions.swift in Sources */,
 				5258EE562A69AC1F00BA1B39 /* KeyboardResponder.swift in Sources */,
+				52D109C42A83B73D007531E3 /* KeyboardInfo+Extensions.swift in Sources */,
 				5258EE532A69A6E200BA1B39 /* ConversationScreen.swift in Sources */,
 				5258EE3E2A69962F00BA1B39 /* Store.swift in Sources */,
+				52D109B82A82A7BF007531E3 /* ConversationMessageContainer.swift in Sources */,
+				52D109BA2A82AB32007531E3 /* ConversationHostingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

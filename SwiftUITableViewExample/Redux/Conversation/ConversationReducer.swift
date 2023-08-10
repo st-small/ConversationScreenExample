@@ -8,7 +8,10 @@ func ConversationReducer(state: inout ConversationState, action: ConversationAct
                 id: UUID(),
                 value: value,
                 image: nil,
-                width: CGFloat.random(in: 100...300))
+                width: CGFloat.random(in: 100...270),
+                status: Int.random(in: 0...100).isMultiple(of: 2)
+                ? .incoming : .outgoing
+            )
         )
     case let .addMessage(message):
         state.messages.append(message)

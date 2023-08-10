@@ -22,8 +22,24 @@ struct SwiftUITableViewExampleApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ConversationScreenConnector()
-                .environmentObject(store)
+            NavigationStack {
+                List {
+                    NavigationLink("Native SwiftUI") {
+                        ConversationScreenConnector()
+                            .environmentObject(store)
+                    }
+                    
+                    NavigationLink("SwiftUI with bottom ScrollView") {
+                        SecondConversationScreen()
+                            .environmentObject(store)
+                    }
+                    
+                    NavigationLink("UIKit") {
+                        UIKitConversationScreen()
+                        .environmentObject(store)
+                    }
+                }
+            }
         }
     }
     
