@@ -1,6 +1,10 @@
 import SwiftUI
 import UIKit
 
+protocol ConversationListContainerIxResponder {
+    func onDelete(uuid: UUID, isCurrentUser: Bool) -> Void
+}
+
 struct ConversationListContainer: UIViewControllerRepresentable {
     @Binding var messages: [Message]
 
@@ -16,10 +20,9 @@ struct ConversationListContainer: UIViewControllerRepresentable {
 }
 
 
-public final class ConversationTableViewController: UITableViewController {
+public class ConversationTableViewController: UITableViewController {
     private var messages: [Message] = []
     private var onTap: (() -> Void)?
-
     override init(style: UITableView.Style) {
         super.init(style: style)
         tableView.register(
@@ -44,7 +47,7 @@ public final class ConversationTableViewController: UITableViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.scrollToBottom()
         }
-        
+        self.updateTableContentInset()
         tableView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
     }
     
@@ -70,7 +73,7 @@ public final class ConversationTableViewController: UITableViewController {
     public func update(messages: [Message], onTap: @escaping () -> Void) {
         DispatchQueue.main.async {
             self.messages = messages
-            self.tableView.reloadData()
+            self.updateTableContentInset()
         }
 
         self.onTap = onTap
@@ -93,21 +96,9 @@ public final class ConversationTableViewController: UITableViewController {
             for: indexPath
         ) as? ConversationHostingCell<ConversationMessageContainerConnector>
         else { preconditionFailure() }
-
-        cell.set(rootView: ConversationMessageContainerConnector(messageID: message.id, onDelete: { id, isCurrentUser in
-            DispatchQueue.main.async {
-                if let idx = self.messages.firstMessageIndex(id) {
-                    self.messages.remove(at: idx)
-
-                    if let indexPath = tableView.indexPath(for: cell) {
-                        let animation: UITableView.RowAnimation = isCurrentUser ? .right : .left
-                        tableView.deleteRows(at: [indexPath], with: animation)
-                    }
-                }
-            }
-        }), parent: self)
+        cell.tag = message.id.hashToInt()
+        cell.set(rootView: ConversationMessageContainerConnector(messageID: message.id, ixResponder: self), parent: self)
         currentCell = cell
-
         currentCell.backgroundColor = .clear
 
         return currentCell
@@ -125,5 +116,40 @@ public final class ConversationTableViewController: UITableViewController {
     private func tableViewDidTap() {
         onTap?()
     }
+    
+    func updateTableContentInset() {
+        let numRows = self.tableView.numberOfRows(inSection: 0)
+        var contentInsetTop = self.tableView.bounds.size.height
+        for i in 0..<numRows {
+            let rowRect = self.tableView.rectForRow(at: IndexPath(item: i, section: 0))
+            contentInsetTop -= rowRect.size.height
+            if contentInsetTop <= 0 {
+                contentInsetTop = 0
+                break
+            }
+        }
+        self.tableView.contentInset = UIEdgeInsets(top: contentInsetTop,left: 0,bottom: 0,right: 0)
+        self.tableView.reloadData()
+    }
 }
 
+extension ConversationTableViewController: ConversationListContainerIxResponder {
+    func onDelete(uuid: UUID, isCurrentUser: Bool) {
+        DispatchQueue.main.async {
+            if let idx = self.messages.firstMessageIndex(uuid) {
+                self.messages.remove(at: idx)
+                for cell in self.tableView.visibleCells {
+                    if cell.tag == uuid.hashToInt() {
+                        if let indexPath = self.tableView.indexPath(for: cell) {
+                            let animation: UITableView.RowAnimation = isCurrentUser ? .right : .left
+                            self.tableView.deleteRows(at: [indexPath], with: animation)
+                            self.updateTableContentInset()
+                        }
+                        break
+                    }
+                }
+            }
+        }
+    }
+    
+}

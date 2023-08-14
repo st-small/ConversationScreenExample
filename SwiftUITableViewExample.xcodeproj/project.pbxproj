@@ -34,6 +34,7 @@
 		52D109C02A83A413007531E3 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D109BF2A83A413007531E3 /* View+Extensions.swift */; };
 		52D109C22A83B4BC007531E3 /* UIKitConversationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D109C12A83B4BC007531E3 /* UIKitConversationScreen.swift */; };
 		52D109C42A83B73D007531E3 /* KeyboardInfo+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D109C32A83B73D007531E3 /* KeyboardInfo+Extensions.swift */; };
+		E7AA03DD2A89CA81008BBD6D /* UUID+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA03DC2A89CA81008BBD6D /* UUID+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		52D109BF2A83A413007531E3 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		52D109C12A83B4BC007531E3 /* UIKitConversationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitConversationScreen.swift; sourceTree = "<group>"; };
 		52D109C32A83B73D007531E3 /* KeyboardInfo+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardInfo+Extensions.swift"; sourceTree = "<group>"; };
+		E7AA03DC2A89CA81008BBD6D /* UUID+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UUID+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 				52CB5EA92A78027D008487D4 /* Color+Extensions.swift */,
 				52D109BF2A83A413007531E3 /* View+Extensions.swift */,
 				52D109C32A83B73D007531E3 /* KeyboardInfo+Extensions.swift */,
+				E7AA03DC2A89CA81008BBD6D /* UUID+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				5258EE462A69A40700BA1B39 /* AppReducer.swift in Sources */,
 				52CB5EA62A77FEE4008487D4 /* SecondConversationScreen.swift in Sources */,
 				5258EE592A69AC6D00BA1B39 /* UIApplication+Extensions.swift in Sources */,
+				E7AA03DD2A89CA81008BBD6D /* UUID+Extensions.swift in Sources */,
 				5258EE492A69A51800BA1B39 /* ConversationState.swift in Sources */,
 				52D109C22A83B4BC007531E3 /* UIKitConversationScreen.swift in Sources */,
 				52CB5EAA2A78027D008487D4 /* Color+Extensions.swift in Sources */,

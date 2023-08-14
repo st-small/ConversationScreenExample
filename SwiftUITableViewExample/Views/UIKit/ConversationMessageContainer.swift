@@ -2,15 +2,15 @@ import SwiftUI
 
 struct ConversationMessageContainerConnector: Connector {
     let messageID: UUID
-    let onDelete: (UUID, Bool) -> Void
-
+    let ixResponder: ConversationListContainerIxResponder?
+    
     func map(store: AppStore) -> some View {
         let message = store.state.conversation.messages
             .first(where: { $0.id == messageID })
         let isSentByCurrentUser = message?.status == .outgoing
 
         return ConversationMessageContainer(
-            message: ChatMessage(
+            ixResponder: ixResponder, message: ChatMessage(
                 id: messageID,
                 text: message?.content ?? "",
                 image: message?.image,
@@ -18,11 +18,7 @@ struct ConversationMessageContainerConnector: Connector {
                 type: message?.image == nil ? .primary : .content,
                 width: message?.width ?? 100,
                 isSentByCurrentUser: isSentByCurrentUser
-            ),
-            onDelete: { id in
-                onDelete(id, isSentByCurrentUser)
-                store.dispatch(.conversation(.deleteMessage(id)))
-            }
+            )
         )
     }
 }
@@ -54,32 +50,34 @@ struct MessageSpacer: View {
 }
 
 struct ConversationMessageContainer: View {
+    let ixResponder: ConversationListContainerIxResponder?
     let message: ChatMessage
-    let onDelete: (UUID) -> Void
-
+    
     var body: some View {
         HStack {
             if message.isSentByCurrentUser {
                 MessageSpacer()
             }
-
+            
             VStack(alignment: message.isSentByCurrentUser ? .trailing : .leading) {
                 MessageView(
                     message: message,
                     primaryView: { _ in
                         MessageTextView(message: message) {
-                            onDelete(message.id)
+                            ixResponder?.onDelete(uuid: message.id,
+                                                  isCurrentUser: message.isSentByCurrentUser)
                         }
                     },
                     contentView: { _ in
                         MessageContentView(message: message) {
-                            onDelete(message.id)
+                            ixResponder?.onDelete(uuid: message.id,
+                                                  isCurrentUser: message.isSentByCurrentUser)
                         }
                     }
                 )
                 .padding(.vertical, 5)
             }
-
+            
             if !message.isSentByCurrentUser {
                 MessageSpacer()
             }
