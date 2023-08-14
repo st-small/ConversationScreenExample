@@ -1,8 +1,15 @@
 import SwiftUI
 
+struct UIKitConversationConnector: Connector {
+    func map(store: AppStore) -> some View {
+        UIKitConversationScreen(messages: store.state.conversation.messages)
+    }
+}
+
 struct UIKitConversationScreen: View {
     
-    @EnvironmentObject var store: AppStore
+    let messages: [Message]
+    
     @ObservedObject private var keyboard = KeyboardResponder()
     
     @State private var text = ""
@@ -10,7 +17,7 @@ struct UIKitConversationScreen: View {
     var body: some View {
         VStack {
             ConversationListContainer(
-                messages: .constant(store.state.conversation.messages)
+                messages: messages
             )
             .background {
                 Color.pink.opacity(0.3)
@@ -58,8 +65,7 @@ struct UIKitConversationScreen_Previews: PreviewProvider {
     
     static var previews: some View {
         NavigationStack {
-            UIKitConversationScreen()
-                .environmentObject(store)
+            UIKitConversationScreen(messages: messagesData)
         }
     }
 }

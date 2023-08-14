@@ -35,8 +35,8 @@ struct SwiftUITableViewExampleApp: App {
                     }
                     
                     NavigationLink("UIKit") {
-                        UIKitConversationScreen()
-                        .environmentObject(store)
+                        UIKitConversationConnector()
+                            .environmentObject(store)
                     }
                 }
             }

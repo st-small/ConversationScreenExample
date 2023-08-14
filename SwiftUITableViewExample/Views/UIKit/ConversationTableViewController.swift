@@ -6,7 +6,7 @@ protocol ConversationListContainerIxResponder {
 }
 
 struct ConversationListContainer: UIViewControllerRepresentable {
-    @Binding var messages: [Message]
+    let messages: [Message]
 
     func makeUIViewController(context _: Context) -> ConversationTableViewController {
         ConversationTableViewController(style: .plain)
@@ -48,21 +48,6 @@ public class ConversationTableViewController: UITableViewController {
             self.scrollToBottom()
         }
         self.updateTableContentInset()
-        tableView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
-    }
-    
-    public override func observeValue(
-        forKeyPath keyPath: String?,
-        of object: Any?,
-        change: [NSKeyValueChangeKey : Any]?,
-        context: UnsafeMutableRawPointer?
-    ) {
-        guard keyPath == "contentSize",
-              let newValue = change?[.newKey],
-              let newSize = newValue as? CGSize
-        else { return }
-        
-        print("Table view new size \(newSize)")
     }
 
     @available(*, unavailable)
@@ -105,7 +90,7 @@ public class ConversationTableViewController: UITableViewController {
     }
 
     private func scrollToBottom() {
-        guard messages.count > 5 else { return }
+        guard !messages.isEmpty else { return }
         DispatchQueue.main.async {
             let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
             self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)

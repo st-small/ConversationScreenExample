@@ -1,6 +1,9 @@
 import SwiftUI
 
 struct MessageContentView: View {
+    
+    @EnvironmentObject var store: AppStore
+    
     let message: ChatMessage
     let onDelete: () -> Void
 
@@ -14,6 +17,8 @@ struct MessageContentView: View {
             .contextMenu {
                 Button("Replace") {
                     onDelete()
+                    
+                    store.dispatch(.conversation(.deleteMessage(message.id)))
                 }
             }
         .frame(width: message.width)
