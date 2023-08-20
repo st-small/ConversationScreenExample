@@ -47,9 +47,14 @@ public class ConversationTableViewController: UITableViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.scrollToBottom()
         }
-        self.updateTableContentInset()
+        
     }
 
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.updateTableContentInset()
+    }
+    
     @available(*, unavailable)
     required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
