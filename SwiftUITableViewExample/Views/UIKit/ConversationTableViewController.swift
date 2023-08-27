@@ -36,10 +36,11 @@ public class ConversationTableViewController: UITableViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(tableViewDidTap))
         tableView.addGestureRecognizer(tap)
     }
-
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
-
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         /// Костыль для ограничения постоянного скролла к низу списка сообщений
         /// 1. Скролл должен отрабатывать единожды при открытии экрана
         /// 2. Каждый раз, когда коллекция сообщений изменилась
@@ -107,7 +108,7 @@ public class ConversationTableViewController: UITableViewController {
         onTap?()
     }
     
-    func updateTableContentInset() {
+    func updateTableContentInset(isUpdate: Bool = true) {
         let numRows = self.tableView.numberOfRows(inSection: 0)
         var contentInsetTop = self.tableView.bounds.size.height
         for i in 0..<numRows {
@@ -142,4 +143,18 @@ extension ConversationTableViewController: ConversationListContainerIxResponder 
         }
     }
     
+}
+
+extension ConversationTableViewController {
+    @objc func keyboardWillShow(_ notification: Notification) {
+        guard let height = self.tableView.visibleCells.last?.frame.height else { return }
+        self.tableView.setContentOffset(CGPoint(x: 0.0, y: self.tableView.contentOffset.y + height), animated: true)
+        
+    }
+    
+    @objc func keyboardWillHide(_ notification: Notification) {
+        guard let height = self.tableView.visibleCells.last?.frame.height else { return }
+        self.tableView.setContentOffset(CGPoint(x: 0.0, y: self.tableView.contentOffset.y + height), animated: true)
+        
+    }
 }
