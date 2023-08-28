@@ -8,8 +8,8 @@ enum MessageSendStatus {
     case incoming, outgoing
 }
 
-public struct Message: Hashable {
-    let id: UUID
+public struct Message: Hashable, Identifiable {
+    public let id: UUID
     let value: Int
     let image: String?
     let width: CGFloat

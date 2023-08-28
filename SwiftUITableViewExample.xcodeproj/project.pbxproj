@@ -23,6 +23,7 @@
 		5258EE532A69A6E200BA1B39 /* ConversationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258EE522A69A6E200BA1B39 /* ConversationScreen.swift */; };
 		5258EE562A69AC1F00BA1B39 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258EE552A69AC1F00BA1B39 /* KeyboardResponder.swift */; };
 		5258EE592A69AC6D00BA1B39 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258EE582A69AC6D00BA1B39 /* UIApplication+Extensions.swift */; };
+		527F026A2A8E6C9F00A6BE06 /* ThirdConversationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F02692A8E6C9F00A6BE06 /* ThirdConversationScreen.swift */; };
 		52CB5EA62A77FEE4008487D4 /* SecondConversationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB5EA52A77FEE4008487D4 /* SecondConversationScreen.swift */; };
 		52CB5EA82A780219008487D4 /* MessageCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB5EA72A780219008487D4 /* MessageCellView.swift */; };
 		52CB5EAA2A78027D008487D4 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB5EA92A78027D008487D4 /* Color+Extensions.swift */; };
@@ -56,6 +57,7 @@
 		5258EE542A69A7DF00BA1B39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5258EE552A69AC1F00BA1B39 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
 		5258EE582A69AC6D00BA1B39 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
+		527F02692A8E6C9F00A6BE06 /* ThirdConversationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdConversationScreen.swift; sourceTree = "<group>"; };
 		52CB5EA52A77FEE4008487D4 /* SecondConversationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondConversationScreen.swift; sourceTree = "<group>"; };
 		52CB5EA72A780219008487D4 /* MessageCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCellView.swift; sourceTree = "<group>"; };
 		52CB5EA92A78027D008487D4 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			children = (
 				5258EE522A69A6E200BA1B39 /* ConversationScreen.swift */,
 				52CB5EA52A77FEE4008487D4 /* SecondConversationScreen.swift */,
+				527F02692A8E6C9F00A6BE06 /* ThirdConversationScreen.swift */,
 				52CB5EA72A780219008487D4 /* MessageCellView.swift */,
 				52D109B42A82A6E2007531E3 /* UIKit */,
 			);
@@ -285,6 +288,7 @@
 				52CB5EAA2A78027D008487D4 /* Color+Extensions.swift in Sources */,
 				5258EE562A69AC1F00BA1B39 /* KeyboardResponder.swift in Sources */,
 				52D109C42A83B73D007531E3 /* KeyboardInfo+Extensions.swift in Sources */,
+				527F026A2A8E6C9F00A6BE06 /* ThirdConversationScreen.swift in Sources */,
 				5258EE532A69A6E200BA1B39 /* ConversationScreen.swift in Sources */,
 				5258EE3E2A69962F00BA1B39 /* Store.swift in Sources */,
 				52D109B82A82A7BF007531E3 /* ConversationMessageContainer.swift in Sources */,
