@@ -16,9 +16,7 @@ struct UIKitConversationScreen: View {
     
     var body: some View {
         VStack {
-            ConversationListContainer(
-                messages: messages
-            )
+            ConversationListContainer(messages: messages)
             .background {
                 Color.pink.opacity(0.3)
             }
@@ -33,7 +31,6 @@ struct UIKitConversationScreen: View {
             }
             .frame(height: 100)
         }
-        .offset(y: -keyboard.currentHeight)
         .edgesIgnoringSafeArea(.bottom)
         .animation(.default, value: keyboard.currentHeight)
         .navigationTitle("Conversation")

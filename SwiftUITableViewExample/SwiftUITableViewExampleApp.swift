@@ -1,4 +1,5 @@
 import SwiftUI
+import IQKeyboardManagerSwift
 
 let store = AppStore(
     initialState: .init(),
@@ -8,6 +9,7 @@ let store = AppStore(
 struct SwiftUITableViewExampleApp: App {
     
     init() {
+        IQKeyboardManager.shared.enable = true
         prepareInitialData()
         
         let coloredAppearance = UINavigationBarAppearance()
